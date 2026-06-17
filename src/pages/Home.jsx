@@ -207,7 +207,7 @@ const Home = () => {
           >
             <div className="w-full max-w-3xl h-56 md:h-80 relative rounded-2xl bg-white shadow-2xl flex items-center justify-center p-8 border border-secondary/30 group">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer_2s_infinite] pointer-events-none rounded-2xl z-20"></div>
-              <img 
+              <img loading="lazy" 
                 src="/psr_logo_and_side_heading.png" 
                 alt="Pandu Seshagiri Rao Memorial Foundation" 
                 className="w-full h-full object-contain relative z-10"
@@ -287,7 +287,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
             >
               <h4 className="text-secondary font-heading text-xs font-bold uppercase tracking-widest mb-2">Our Foundation Story</h4>
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-8">A Daughter's Promise. A Father's Legacy.</h2>
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-8">A Promise Honored. A Legacy Continued.</h2>
               
               <div className="space-y-6 relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-200 before:to-transparent">
                 {[
@@ -378,7 +378,7 @@ const Home = () => {
             className="mt-16 max-w-2xl mx-auto"
           >
             <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-white flex items-center justify-center p-3 mb-10 shadow-2xl">
-               <img src="/psr_logo.png" alt="PSR Logo" className="w-full h-full object-contain" />
+               <img loading="lazy" src="/psr_logo.png" alt="PSR Logo" className="w-full h-full object-contain" />
             </div>
             <h3 className="text-xl md:text-2xl font-heading italic font-light text-white leading-relaxed">
               "One act of kindness can transform generations."
@@ -399,7 +399,7 @@ const Home = () => {
           >
             <div className="grid grid-cols-1 md:grid-cols-5 items-stretch">
               <div className="md:col-span-2 relative h-[400px] md:h-auto overflow-hidden group">
-                <img src="/founder pic.jpeg" alt="Founder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img loading="lazy" src="/founder pic.jpeg" alt="Founder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 text-white z-10 w-full">
                   <h3 className="text-2xl font-heading font-bold mb-1">Message from the Founder</h3>
@@ -417,7 +417,7 @@ const Home = () => {
                     When the PSR Memorial Foundation was established, it was born out of profound loss, but fueled by an unwavering commitment to continue a legacy of boundless kindness. We believe that every child deserves an education, every community deserves access to healthcare, and no one should sleep hungry.
                   </p>
                   <p>
-                    Through holistic empowerment and direct support, we are not just providing temporary relief—we are building a foundation for sustainable, generational change. I personally invite you to join us in this mission of hope, dignity, and transformational impact. Together, we can build a world that is gentler, more equitable, and deeply compassionate.
+                    Through holistic empowerment and direct support, we are not just providing temporary relief, we are building a foundation for sustainable, generational change. I personally invite you to join us in this mission of hope, dignity, and transformational impact. Together, we can build a world that is gentler, more equitable, and deeply compassionate.
                   </p>
                 </div>
                 <div className="relative z-10 flex items-center gap-4">
@@ -459,7 +459,7 @@ const Home = () => {
                 transition={{ delay: index * 0.1 }}
                 className="relative overflow-hidden rounded-2xl group h-64 shadow-xl border border-gray-200"
               >
-                <img 
+                <img loading="lazy" 
                   src={stat.image} 
                   alt={stat.label} 
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" 
@@ -493,7 +493,7 @@ const Home = () => {
           >
             <div className="w-full md:w-2/5 relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-lg relative">
-                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop" alt="Real Impact" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                <img loading="lazy" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop" alt="Real Impact" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-secondary rounded-full flex items-center justify-center shadow-xl">
                 <Quote size={28} className="text-white" />
@@ -548,7 +548,7 @@ const Home = () => {
                 transition={{ delay: index * 0.1 }}
                 className="relative overflow-hidden rounded-2xl group h-80 shadow-xl cursor-pointer border border-white/10"
               >
-                <img src={area.image} alt={area.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+                <img loading="lazy" src={area.image} alt={area.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#082f6e]/95 via-[#082f6e]/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
                 
                 <div className="absolute inset-0 p-8 z-20 flex flex-col justify-end">
@@ -570,7 +570,7 @@ const Home = () => {
       <section className="relative py-32 bg-primary overflow-hidden">
         {/* Cinematic Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <img loading="lazy" 
             src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2070&auto=format&fit=crop" 
             alt="Imagine The Difference" 
             className="w-full h-full object-cover filter blur-sm scale-105"
@@ -642,7 +642,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full border border-gray-100 shadow-md bg-white p-3 mb-8"
           >
-            <img src="/psr_logo.png" alt="PSR Logo" className="w-full h-full object-contain" />
+            <img loading="lazy" src="/psr_logo.png" alt="PSR Logo" className="w-full h-full object-contain" />
           </motion.div>
 
           <motion.h2 
@@ -661,7 +661,7 @@ const Home = () => {
             transition={{ delay: 0.1 }}
             className="text-base md:text-lg font-body text-text/70 max-w-2xl mx-auto mb-16 leading-relaxed"
           >
-            Your generosity goes beyond transactions—it creates lasting transformation. Join us in building a future where every individual has the opportunity to thrive.
+            Your generosity goes beyond transactions, it creates lasting transformation. Join us in building a future where every individual has the opportunity to thrive.
           </motion.p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

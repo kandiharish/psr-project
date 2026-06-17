@@ -55,7 +55,7 @@ const Gallery = () => {
               className="relative group rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-shadow break-inside-avoid"
               onClick={() => setSelectedImage(image)}
             >
-              <img 
+              <img loading="lazy" 
                 src={image.src} 
                 alt={image.alt} 
                 className="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
@@ -94,7 +94,7 @@ const Gallery = () => {
               className="relative max-w-5xl w-full max-h-[90vh] flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              <img 
+              <img loading="lazy" 
                 src={selectedImage.src} 
                 alt={selectedImage.alt} 
                 className="w-full h-auto max-h-[85vh] object-contain rounded-lg shadow-2xl"
