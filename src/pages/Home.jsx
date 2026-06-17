@@ -5,6 +5,7 @@ import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import Gallery from '../components/ui/Gallery';
+import MomentsOfImpact from '../components/layout/MomentsOfImpact';
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -512,6 +513,8 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      <MomentsOfImpact />
 
       {/* Focus Areas */}
       <section id="programs" className="py-20 bg-light-bg relative z-20">
