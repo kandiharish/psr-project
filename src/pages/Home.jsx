@@ -118,15 +118,25 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 relative z-30"
+            className="flex flex-col items-center gap-4 relative z-30"
           >
-            <a href="#donate" className="group px-8 py-3 bg-secondary text-primary rounded-full font-bold text-base hover:bg-yellow-400 hover:scale-105 transition-all duration-300 text-center flex items-center justify-center gap-2 shadow-lg">
-              <span>Donate Now</span>
-              <Heart size={16} className="fill-primary" />
-            </a>
-            <a href="#programs" className="group px-8 py-3 bg-transparent border border-white/40 rounded-full text-white font-semibold text-base hover:bg-white/10 hover:border-white transition-all duration-300 text-center">
-              <span>Join Our Mission</span>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#donate" className="group px-8 py-3 bg-secondary text-primary rounded-full font-bold text-base hover:bg-yellow-400 hover:scale-105 transition-all duration-300 text-center flex items-center justify-center gap-2 shadow-lg">
+                <span>Donate Now</span>
+                <Heart size={16} className="fill-primary" />
+              </a>
+              <a href="#programs" className="group px-8 py-3 bg-transparent border border-white/40 rounded-full text-white font-semibold text-base hover:bg-white/10 hover:border-white transition-all duration-300 text-center">
+                <span>Join Our Mission</span>
+              </a>
+            </div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1 }}
+              className="mt-2 text-xs md:text-sm text-gray-300/80 italic font-body"
+            >
+              100% of your contribution goes directly to the field.
+            </motion.p>
           </motion.div>
         </motion.div>
       </section>
@@ -415,7 +425,7 @@ const Home = () => {
                     <Heart size={20} className="text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-primary text-lg">Selsiya</h4>
+                    <h4 className="font-signature font-bold text-primary text-3xl md:text-4xl mt-1">Selsiya</h4>
                     <p className="text-xs text-gray-500 font-body uppercase tracking-wider">Founder & Chairperson</p>
                   </div>
                 </div>
@@ -429,7 +439,7 @@ const Home = () => {
       <section className="py-20 bg-light-bg relative z-20 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">Our Impact So Far</h2>
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">The Lives You've Touched</h2>
             <p className="text-sm font-body text-muted-text max-w-xl mx-auto">Together, we are creating sustainable change and building brighter futures across communities.</p>
           </div>
           
@@ -472,12 +482,43 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Stories of Change Section */}
+      <section className="py-24 bg-white relative z-20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row items-center gap-12 bg-light-bg rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100"
+          >
+            <div className="w-full md:w-2/5 relative">
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-lg relative">
+                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop" alt="Real Impact" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-secondary rounded-full flex items-center justify-center shadow-xl">
+                <Quote size={28} className="text-white" />
+              </div>
+            </div>
+            <div className="w-full md:w-3/5 space-y-6">
+              <h3 className="text-secondary font-heading text-sm md:text-base font-bold uppercase tracking-[0.2em]">Stories of Change</h3>
+              <p className="text-xl md:text-2xl font-serif italic text-primary leading-relaxed">
+                "Before the foundation, my daughter had to walk three miles just to get clean water. Now, she spends that time in school, dreaming of becoming a doctor. You didn't just give us water; you gave her a future."
+              </p>
+              <div>
+                <p className="font-signature font-bold text-3xl text-primary mt-4">Meera</p>
+                <p className="text-sm text-gray-500 font-body uppercase tracking-wider mt-1">Mother of two, Supported Village</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Focus Areas */}
-      <section id="programs" className="py-20 bg-white relative z-20">
+      <section id="programs" className="py-20 bg-light-bg relative z-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div className="max-w-2xl">
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">Our Focus Areas</h2>
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">Where We Put Our Hearts</h2>
               <p className="text-sm font-body text-muted-text">We work across multiple dimensions of social development to create holistic, long-lasting impact.</p>
             </div>
             <Button variant="ghost" className="mt-4 md:mt-0 text-xs font-semibold group flex items-center gap-2">
