@@ -142,18 +142,35 @@ const Home = () => {
         </motion.div>
       </section>
 
-      {/* Why This Foundation Exists */}
-      <section className="py-32 bg-white relative z-20 flex flex-col items-center justify-center min-h-[70vh]">
+      {/* Foundation & Legacy Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-[#F8F6F0] relative z-20 min-h-screen flex flex-col justify-center items-center border-b border-gray-200">
         {/* Subtle Background Lighting */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-secondary/5 rounded-full blur-[120px] pointer-events-none"></div>
         
-        <div className="container mx-auto px-4 max-w-5xl text-center relative z-10">
+        <div className="container mx-auto px-4 max-w-5xl text-center relative z-10 flex flex-col items-center justify-center h-full">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-4 inline-flex justify-center w-full"
+          >
+            <div className="w-full max-w-3xl h-40 md:h-56 relative rounded-2xl bg-white shadow-xl flex items-center justify-center p-4 border border-secondary/30 group">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer_2s_infinite] pointer-events-none rounded-2xl z-20"></div>
+              <img loading="lazy" 
+                src="/psr_logo_and_side_heading.png" 
+                alt="Pandu Seshagiri Rao Memorial Foundation" 
+                className="w-full h-full object-contain relative z-10"
+              />
+            </div>
+          </motion.div>
+
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="mb-12 inline-block relative"
+            className="mb-6 inline-block relative mt-2"
           >
             <h4 className="text-secondary font-heading text-sm md:text-base font-bold uppercase tracking-[0.3em]">
               Why This Foundation Exists
@@ -163,97 +180,156 @@ const Home = () => {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 1.5, delay: 0.2, ease: "easeInOut" }}
-              className="absolute -bottom-3 left-0 w-full h-1 bg-secondary origin-left"
+              className="absolute -bottom-2 left-0 w-full h-1 bg-secondary origin-left"
             ></motion.div>
           </motion.div>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-            className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-light text-primary leading-[1.2] mb-16 tracking-tight"
-          >
-            "Because kindness should <br className="hidden md:block"/> not end with a lifetime."
-          </motion.h2>
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="w-px h-24 bg-gradient-to-b from-secondary via-secondary/50 to-transparent mx-auto mb-16"
-          ></motion.div>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="text-xl md:text-2xl font-body text-gray-500 max-w-3xl mx-auto leading-relaxed font-light"
-          >
-            Through every child educated, every family supported, and every life transformed, a legacy continues.
-          </motion.p>
-        </div>
-      </section>
 
-      {/* Legacy Memorial Section */}
-      <section className="py-20 bg-gradient-to-b from-[#FFFDF9] to-[#F8F6F0] relative z-20 border-b border-gray-200">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-10 inline-flex justify-center w-full"
-          >
-            <div className="w-full max-w-3xl h-56 md:h-80 relative rounded-2xl bg-white shadow-2xl flex items-center justify-center p-8 border border-secondary/30 group">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent group-hover:animate-[shimmer_2s_infinite] pointer-events-none rounded-2xl z-20"></div>
-              <img loading="lazy" 
-                src="/psr_logo_and_side_heading.png" 
-                alt="Pandu Seshagiri Rao Memorial Foundation" 
-                className="w-full h-full object-contain relative z-10"
-              />
-            </div>
-          </motion.div>
-          
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-heading font-bold text-primary mb-12"
+            className="text-2xl md:text-4xl font-heading font-bold text-primary mb-4"
           >
             In Loving Memory of <br/>
             <motion.span 
               animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              className="inline-block mt-4 pb-2 pt-1 px-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-500 bg-[length:200%_auto] italic font-extrabold tracking-wide drop-shadow-sm leading-relaxed"
+              className="inline-block mt-2 pb-1 pt-1 px-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-500 bg-[length:200%_auto] italic font-extrabold tracking-wide drop-shadow-sm leading-relaxed"
             >
               Pandu Seshagiri Rao
             </motion.span>
           </motion.h2>
 
-          <div className="space-y-8">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="text-xl md:text-3xl font-heading font-light text-primary leading-[1.2] mb-6 tracking-tight"
+          >
+            "Because kindness should not end with a lifetime."
+          </motion.h2>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="mt-12 py-10 px-6 relative"
-            >
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
-              
-              <div className="relative z-10 text-center">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif italic text-primary leading-relaxed drop-shadow-sm max-w-4xl mx-auto font-light">
-                  <span className="font-heading font-bold text-secondary not-italic text-sm md:text-base block mb-6 uppercase tracking-[0.25em]">Today, his legacy lives on</span>
-                  through every <span className="text-amber-500 font-normal">child educated</span>, 
-                  every <span className="text-amber-500 font-normal">girl empowered</span>, 
-                  every <span className="text-amber-500 font-normal">family supported</span>, 
-                  and every <span className="text-amber-500 font-normal">community transformed</span>.
-                </h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="mt-2 relative"
+          >
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
+            
+            <div className="relative z-10 text-center pt-6 pb-2">
+              <h3 className="text-lg md:text-2xl lg:text-3xl font-serif italic text-primary leading-relaxed drop-shadow-sm max-w-4xl mx-auto font-light">
+                <span className="font-heading font-bold text-secondary not-italic text-xs md:text-sm block mb-3 uppercase tracking-[0.25em]">Today, his legacy lives on</span>
+                through every <span className="text-amber-500 font-normal">child educated</span>, 
+                every <span className="text-amber-500 font-normal">girl empowered</span>, 
+                every <span className="text-amber-500 font-normal">family supported</span>, 
+                and every <span className="text-amber-500 font-normal">community transformed</span>.
+              </h3>
+            </div>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* Message from the Founder Section */}
+      <section className="py-24 bg-[#F8F6F0] relative z-20 border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-100"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-5 items-stretch">
+              <div className="md:col-span-2 relative h-[400px] md:h-auto overflow-hidden group">
+                <img loading="lazy" src="/founder pic.jpeg" alt="Founder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-8 text-white z-10 w-full">
+                  <h3 className="text-2xl font-heading font-bold mb-1">Message from the Founder</h3>
+                  <div className="w-10 h-1 bg-secondary rounded-full mt-2 mb-2"></div>
+                  <p className="text-sm font-body text-gray-200 uppercase tracking-widest">PSR Memorial Foundation</p>
+                </div>
               </div>
-            </motion.div>
+              <div className="md:col-span-3 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
+                <Quote size={80} className="text-secondary/10 absolute top-8 right-8" />
+                <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-6 leading-tight relative z-10">
+                  "Compassion is an action that can permanently change the trajectory of someone's life."
+                </h2>
+                <div className="space-y-4 text-text/80 font-body leading-relaxed mb-10 relative z-10">
+                  <p>
+                    When the PSR Memorial Foundation was established, it was born out of profound loss, but fueled by an unwavering commitment to continue a legacy of boundless kindness. We believe that every child deserves an education, every community deserves access to healthcare, and no one should sleep hungry.
+                  </p>
+                  <p>
+                    Through holistic empowerment and direct support, we are not just providing temporary relief, we are building a foundation for sustainable, generational change. I personally invite you to join us in this mission of hope, dignity, and transformational impact. Together, we can build a world that is gentler, more equitable, and deeply compassionate.
+                  </p>
+                </div>
+                <div className="relative z-10 flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                    <Heart size={20} className="text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-signature font-bold text-primary text-3xl md:text-4xl mt-1">Selsiya Princy</h4>
+                    <p className="text-xs text-gray-500 font-body uppercase tracking-wider">Founder & Chairperson</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Focus Areas */}
+      <section id="programs" className="py-20 bg-light-bg relative z-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div className="max-w-2xl">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">Where We Put Our Hearts</h2>
+              <p className="text-sm font-body text-muted-text">We work across multiple dimensions of social development to create holistic, long-lasting impact.</p>
+            </div>
+            <Button variant="ghost" className="mt-4 md:mt-0 text-xs font-semibold group flex items-center gap-2">
+              View All Programs
+              <motion.span 
+                className="inline-block"
+                initial={{ x: 0 }}
+                whileHover={{ x: 3 }}
+              >→</motion.span>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: 'Education Support', desc: 'Providing scholarships, learning materials, and infrastructure for underprivileged children.', icon: GraduationCap, image: '/3 education.png' },
+              { title: 'Healthcare Assistance', desc: 'Organizing medical camps and providing essential healthcare access to remote communities.', icon: Activity, image: '/3 health camp.png' },
+              { title: 'Women Empowerment', desc: 'Skill development and advocacy programs to ensure equal opportunities for women.', icon: Users, image: '/girl child empowerment 3.png' },
+              { title: 'Food & Nutrition', desc: 'Ensuring zero hunger by distributing nutritious meals to marginalized communities.', icon: Droplet, image: '/food erving nutrition 3.png' },
+              { title: 'Volunteer Engagement', desc: 'Mobilizing passionate individuals to create grassroots impact and community support.', icon: Heart, image: '/3 volunterr experience.png' },
+              { title: 'Girl Child Education', desc: 'Dedicated programs focusing on removing barriers to education for young girls.', icon: BookOpen, image: '/educating girl child.png' }
+            ].map((area, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="relative overflow-hidden rounded-2xl group h-80 shadow-xl cursor-pointer border border-white/10"
+              >
+                <img loading="lazy" src={area.image} alt={area.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#082f6e]/95 via-[#082f6e]/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
+                
+                <div className="absolute inset-0 p-8 z-20 flex flex-col justify-end">
+                  <div className="w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-primary text-white transition-all duration-300 transform group-hover:-translate-y-2 shadow-lg">
+                    <area.icon size={24} />
+                  </div>
+                  <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-secondary transition-colors transform group-hover:-translate-y-2 duration-300 drop-shadow-md">{area.title}</h3>
+                  <div className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
+                    <p className="text-sm font-body text-blue-50 leading-relaxed drop-shadow-sm mt-2">{area.desc}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -388,94 +464,45 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Message from the Founder Section */}
-      <section className="py-24 bg-[#F8F6F0] relative z-20 border-b border-gray-200">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-100"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-5 items-stretch">
-              <div className="md:col-span-2 relative h-[400px] md:h-auto overflow-hidden group">
-                <img loading="lazy" src="/founder pic.jpeg" alt="Founder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-8 text-white z-10 w-full">
-                  <h3 className="text-2xl font-heading font-bold mb-1">Message from the Founder</h3>
-                  <div className="w-10 h-1 bg-secondary rounded-full mt-2 mb-2"></div>
-                  <p className="text-sm font-body text-gray-200 uppercase tracking-widest">PSR Memorial Foundation</p>
-                </div>
-              </div>
-              <div className="md:col-span-3 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
-                <Quote size={80} className="text-secondary/10 absolute top-8 right-8" />
-                <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-6 leading-tight relative z-10">
-                  "Compassion is an action that can permanently change the trajectory of someone's life."
-                </h2>
-                <div className="space-y-4 text-text/80 font-body leading-relaxed mb-10 relative z-10">
-                  <p>
-                    When the PSR Memorial Foundation was established, it was born out of profound loss, but fueled by an unwavering commitment to continue a legacy of boundless kindness. We believe that every child deserves an education, every community deserves access to healthcare, and no one should sleep hungry.
-                  </p>
-                  <p>
-                    Through holistic empowerment and direct support, we are not just providing temporary relief, we are building a foundation for sustainable, generational change. I personally invite you to join us in this mission of hope, dignity, and transformational impact. Together, we can build a world that is gentler, more equitable, and deeply compassionate.
-                  </p>
-                </div>
-                <div className="relative z-10 flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Heart size={20} className="text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-signature font-bold text-primary text-3xl md:text-4xl mt-1">Selsiya</h4>
-                    <p className="text-xs text-gray-500 font-body uppercase tracking-wider">Founder & Chairperson</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Impact Highlights */}
-      <section className="py-20 bg-light-bg relative z-20 border-b border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">The Lives You've Touched</h2>
-            <p className="text-sm font-body text-muted-text max-w-xl mx-auto">Together, we are creating sustainable change and building brighter futures across communities.</p>
+      <section className="py-24 bg-primary relative z-20 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-luminosity z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#051124]/95 via-primary/95 to-[#051124]/95 z-0"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 md:mb-20">
+            <h4 className="text-secondary font-heading text-xs md:text-sm font-bold uppercase tracking-[0.3em] mb-4">Our Enduring Impact</h4>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-6">A Legacy of Light</h2>
+            <p className="text-base md:text-lg font-body text-blue-100/80 max-w-2xl mx-auto leading-relaxed">
+              We measure our success not in numbers, but in smiles restored, futures secured, and communities transformed by compassion.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              { value: 5000, label: 'Students Supported', image: '/education.png' },
-              { value: 10000, label: 'Girls Empowered', image: '/girls education.png' },
-              { value: 500, label: 'Health Camps', image: '/healthcare camp.png' },
-              { value: 50000, label: 'Meals Provided', image: '/food serving.png' },
-              { value: 1200, label: 'Volunteers', image: '/volunteers.png' }
-            ].map((stat, index) => (
+              { title: 'Illuminating Minds', desc: 'Bringing the light of education to children who dare to dream beyond their circumstances.', image: '/education.png' },
+              { title: 'Uplifting Women', desc: 'Fostering independence, dignity, and unstoppable confidence in young girls.', image: '/girls education.png' },
+              { title: 'Healing Communities', desc: 'Delivering vital care, nourishment, and hope to families in their most vulnerable hours.', image: '/healthcare camp.png' }
+            ].map((pillar, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative overflow-hidden rounded-2xl group h-64 shadow-xl border border-gray-200"
+                transition={{ delay: index * 0.2, duration: 0.8 }}
+                className="relative overflow-hidden rounded-3xl group h-[400px] md:h-[450px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10"
               >
                 <img loading="lazy" 
-                  src={stat.image} 
-                  alt={stat.label} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" 
+                  src={pillar.image} 
+                  alt={pillar.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 z-0 grayscale-[30%] group-hover:grayscale-0" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
-                <div className="absolute inset-0 z-20 flex flex-col justify-end pb-4">
-                  <AnimatedCounter
-                    value={stat.value}
-                    label={stat.label}
-                    colorClass="text-white"
-                    bgClass="transparent"
-                    textColorClass="text-white drop-shadow-md"
-                    labelColorClass="text-blue-100 font-semibold drop-shadow-md"
-                    delay={index * 0.1}
-                  />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10 transition-opacity duration-500 group-hover:opacity-80"></div>
+                <div className="absolute inset-0 z-20 flex flex-col justify-end p-8 md:p-10 transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
+                  <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 group-hover:text-secondary transition-colors duration-300">{pillar.title}</h3>
+                  <div className="w-12 h-1 bg-secondary rounded-full mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"></div>
+                  <p className="text-sm md:text-base font-body text-gray-200 leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-500">{pillar.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -484,30 +511,50 @@ const Home = () => {
       </section>
 
       {/* Stories of Change Section */}
-      <section className="py-24 bg-white relative z-20">
-        <div className="container mx-auto px-4 max-w-5xl">
+      <section className="py-12 md:py-16 bg-white relative z-20 flex items-center min-h-[80vh]">
+        <div className="container mx-auto px-4 max-w-6xl">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col md:flex-row items-center gap-12 bg-light-bg rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100"
+            className="flex flex-col lg:flex-row items-center gap-8 md:gap-10 bg-light-bg rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100"
           >
-            <div className="w-full md:w-2/5 relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-lg relative">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop" alt="Real Impact" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            <div className="w-full lg:w-1/3 relative flex items-center justify-center">
+              <div className="w-full max-w-[320px] lg:max-w-full rounded-2xl overflow-hidden shadow-xl relative bg-white p-2 border border-gray-100 group">
+                <div className="overflow-hidden rounded-xl relative">
+                  <img loading="lazy" src="/stories%20of%20change.jpeg" alt="Determination to Dreams" className="w-full h-[300px] md:h-[350px] lg:h-[420px] object-cover object-center scale-110 transition-transform duration-700 group-hover:scale-125" />
+                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
+                </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-secondary rounded-full flex items-center justify-center shadow-xl">
-                <Quote size={28} className="text-white" />
+              <div className="absolute -bottom-4 -right-4 w-14 h-14 bg-secondary rounded-full flex items-center justify-center shadow-lg z-20 hidden lg:flex">
+                <Quote size={20} className="text-white" />
               </div>
             </div>
-            <div className="w-full md:w-3/5 space-y-6">
-              <h3 className="text-secondary font-heading text-sm md:text-base font-bold uppercase tracking-[0.2em]">Stories of Change</h3>
-              <p className="text-xl md:text-2xl font-serif italic text-primary leading-relaxed">
-                "Before the foundation, my daughter had to walk three miles just to get clean water. Now, she spends that time in school, dreaming of becoming a doctor. You didn't just give us water; you gave her a future."
-              </p>
+            <div className="w-full lg:w-2/3 flex flex-col justify-center space-y-4">
               <div>
-                <p className="font-signature font-bold text-3xl text-primary mt-4">Meera</p>
-                <p className="text-sm text-gray-500 font-body uppercase tracking-wider mt-1">Mother of two, Supported Village</p>
+                <h3 className="text-secondary font-heading text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-1">Stories of Change</h3>
+                <h2 className="text-xl md:text-3xl font-heading font-bold text-primary leading-tight">From Determination to Dreams</h2>
+              </div>
+              
+              <div className="space-y-3 text-sm md:text-base text-text/80 font-body leading-relaxed">
+                <p>
+                  Financial hardships once threatened to interrupt a young girl's education. Her family faced significant challenges, and continuing her studies seemed uncertain.
+                </p>
+                <p>
+                  Despite these obstacles, her brother worked tirelessly in a photography studio to support the family and ensure that her education would not come to a halt. With dedication, sacrifice, and the enduring legacy of their father, <span className="font-semibold text-primary">Pandu Seshagiri Rao</span>, she continued pursuing her dreams.
+                </p>
+                <p>
+                  Today, she is pursuing her Master's degree in the United States, proving that when determination meets opportunity, lives can be transformed.
+                </p>
+                <div className="p-4 bg-white rounded-xl border-l-4 border-secondary shadow-sm my-4 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                  <p className="italic text-gray-700 text-sm font-medium relative z-10">
+                    "Her journey is a reminder that investing in education does more than support a student; it creates opportunities, empowers families, and inspires future generations."
+                  </p>
+                </div>
+                <p className="font-heading font-bold text-primary text-base md:text-lg uppercase tracking-wide">
+                  Every dream deserves a chance. Every opportunity creates a future.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -515,59 +562,6 @@ const Home = () => {
       </section>
 
       <MomentsOfImpact />
-
-      {/* Focus Areas */}
-      <section id="programs" className="py-20 bg-light-bg relative z-20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-3">Where We Put Our Hearts</h2>
-              <p className="text-sm font-body text-muted-text">We work across multiple dimensions of social development to create holistic, long-lasting impact.</p>
-            </div>
-            <Button variant="ghost" className="mt-4 md:mt-0 text-xs font-semibold group flex items-center gap-2">
-              View All Programs
-              <motion.span 
-                className="inline-block"
-                initial={{ x: 0 }}
-                whileHover={{ x: 3 }}
-              >→</motion.span>
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: 'Education Support', desc: 'Providing scholarships, learning materials, and infrastructure for underprivileged children.', icon: GraduationCap, image: '/3 education.png' },
-              { title: 'Healthcare Assistance', desc: 'Organizing medical camps and providing essential healthcare access to remote communities.', icon: Activity, image: '/3 health camp.png' },
-              { title: 'Women Empowerment', desc: 'Skill development and advocacy programs to ensure equal opportunities for women.', icon: Users, image: '/girl child empowerment 3.png' },
-              { title: 'Food & Nutrition', desc: 'Ensuring zero hunger by distributing nutritious meals to marginalized communities.', icon: Droplet, image: '/food erving nutrition 3.png' },
-              { title: 'Volunteer Engagement', desc: 'Mobilizing passionate individuals to create grassroots impact and community support.', icon: Heart, image: '/3 volunterr experience.png' },
-              { title: 'Girl Child Education', desc: 'Dedicated programs focusing on removing barriers to education for young girls.', icon: BookOpen, image: '/educating girl child.png' }
-            ].map((area, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative overflow-hidden rounded-2xl group h-80 shadow-xl cursor-pointer border border-white/10"
-              >
-                <img loading="lazy" src={area.image} alt={area.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 z-0" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#082f6e]/95 via-[#082f6e]/60 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-90"></div>
-                
-                <div className="absolute inset-0 p-8 z-20 flex flex-col justify-end">
-                  <div className="w-14 h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-primary text-white transition-all duration-300 transform group-hover:-translate-y-2 shadow-lg">
-                    <area.icon size={24} />
-                  </div>
-                  <h3 className="text-xl font-heading font-bold text-white mb-2 group-hover:text-secondary transition-colors transform group-hover:-translate-y-2 duration-300 drop-shadow-md">{area.title}</h3>
-                  <div className="overflow-hidden transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
-                    <p className="text-sm font-body text-blue-50 leading-relaxed drop-shadow-sm mt-2">{area.desc}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Imagine The Difference Section */}
       <section className="relative py-32 bg-primary overflow-hidden">

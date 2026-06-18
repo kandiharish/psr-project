@@ -43,11 +43,11 @@ const MomentsOfImpact = () => {
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary mb-6 tracking-tight">
-            Moments of Impact
+            Moments Created by Our Father
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
           <p className="mt-6 text-gray-500 font-body max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Every photograph is a testament to the power of compassion. Witness the lives touched, the futures brightened, and the incredible partners who make it all possible.
+            Every photograph is a testament to his enduring compassion and lifelong vision. Witness the lives touched, the futures brightened, and the incredible partners who help carry his legacy forward.
           </p>
         </div>
       </div>
