@@ -254,11 +254,10 @@ const Home = () => {
                 </div>
               </div>
               <div className="md:col-span-3 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white relative">
-                <Quote size={80} className="text-secondary/10 absolute top-8 right-8" />
                 <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-6 leading-tight relative z-10">
-                  "Compassion is an action that can permanently change the trajectory of someone's life."
+                  Compassion is an action that can permanently change the trajectory of someone's life.
                 </h2>
-                <div className="space-y-4 text-text/80 font-body leading-relaxed mb-10 relative z-10">
+                <div className="space-y-4 text-text/80 font-serif leading-relaxed mb-10 relative z-10">
                   <p>
                     When the PSR Memorial Foundation was established, it was born out of profound loss, but fueled by an unwavering commitment to continue a legacy of boundless kindness. We believe that every child deserves an education, every community deserves access to healthcare, and no one should sleep hungry.
                   </p>
@@ -526,9 +525,6 @@ const Home = () => {
                   <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-14 h-14 bg-secondary rounded-full flex items-center justify-center shadow-lg z-20 hidden lg:flex">
-                <Quote size={20} className="text-white" />
-              </div>
             </div>
             <div className="w-full lg:w-2/3 flex flex-col justify-center space-y-4">
               <div>
@@ -536,24 +532,24 @@ const Home = () => {
                 <h2 className="text-xl md:text-3xl font-heading font-bold text-primary leading-tight">From Determination to Dreams</h2>
               </div>
               
-              <div className="space-y-3 text-sm md:text-base text-text/80 font-body leading-relaxed">
+              <div className="space-y-3 text-sm md:text-base text-text/80 font-serif leading-relaxed">
                 <p>
-                  Financial hardships once threatened to interrupt a young girl's education. Her family faced significant challenges, and continuing her studies seemed uncertain.
+                  Growing up, my father, <span className="font-semibold text-primary">Pandu Seshagiri Rao</span>, held a profound belief: a girl's education holds the power to transform not just a single life, but entire generations. While society often prioritized sons, my father dreamt differently.
                 </p>
                 <p>
-                  Despite these obstacles, her brother worked tirelessly in a photography studio to support the family and ensure that her education would not come to a halt. With dedication, sacrifice, and the enduring legacy of their father, <span className="font-semibold text-primary">Pandu Seshagiri Rao</span>, she continued pursuing her dreams.
+                  When our family faced financial hardships, he made the difficult choice to have my brother work in a photography studio, all to ensure my education would never stop. His strong will and unwavering conviction in my potential became the foundation of my success.
                 </p>
                 <p>
-                  Today, she is pursuing her Master's degree in the United States, proving that when determination meets opportunity, lives can be transformed.
+                  Because he dreamt bigger for his daughter than the world expected, I am now pursuing my Master's degree in the United States. His sacrifice was the greatest lesson in compassion and equity I ever received.
                 </p>
                 <div className="p-4 bg-white rounded-xl border-l-4 border-secondary shadow-sm my-4 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                   <p className="italic text-gray-700 text-sm font-medium relative z-10">
-                    "Her journey is a reminder that investing in education does more than support a student; it creates opportunities, empowers families, and inspires future generations."
+                    His journey taught me that when a father champions his daughter's education, he doesn't just change her future, he inspires a legacy.
                   </p>
                 </div>
                 <p className="font-heading font-bold text-primary text-base md:text-lg uppercase tracking-wide">
-                  Every dream deserves a chance. Every opportunity creates a future.
+                  Every girl deserves a champion. Every dream deserves a chance.
                 </p>
               </div>
             </div>
