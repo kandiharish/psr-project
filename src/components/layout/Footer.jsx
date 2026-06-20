@@ -63,7 +63,9 @@ const Footer = () => {
             <ul className="flex flex-col gap-4 font-body text-xs text-blue-100">
               <li className="flex items-start gap-3">
                 <Phone size={14} className="text-secondary shrink-0 mt-0.5" />
-                <span>+91 9063833032</span>
+                <a href="tel:+918125756876" className="hover:text-white transition-colors">
+                  +91 81257 56876
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={14} className="text-secondary shrink-0 mt-0.5" />
@@ -73,7 +75,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-secondary shrink-0 mt-0.5" />
-                <span>Headquarters,<br />India</span>
+                <span>Hyderabad, Telangana,<br />India</span>
               </li>
             </ul>
           </div>
