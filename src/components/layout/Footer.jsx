@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Users, MessageCircle, Camera, Briefcase } from 'lucide-react';
 import Button from '../ui/Button';
 import { handleDonateClick } from '../../utils/payment';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (email.trim()) {
+      setSubscribed(true);
+    }
+  };
   return (
     <footer id="contact" className="bg-primary text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-8">
@@ -86,16 +95,26 @@ const Footer = () => {
             <p className="font-body text-xs text-blue-100">
               Subscribe to our newsletter to receive updates on our impact and upcoming programs.
             </p>
-            <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                className="px-3 py-2 rounded-md bg-blue-900/50 border border-blue-800 text-white placeholder-blue-300 focus:outline-none focus:border-secondary font-body text-xs"
-              />
-              <Button variant="accent" size="sm" className="w-full text-xs py-2 bg-secondary hover:bg-amber-500">
-                Subscribe
-              </Button>
-            </form>
+            {subscribed ? (
+              <div className="bg-blue-900/40 border border-emerald-500/30 rounded-xl p-4 text-center">
+                <p className="text-secondary font-bold text-xs mb-1">🎉 Thank you!</p>
+                <p className="text-blue-100 text-[11px]">You've successfully subscribed to our newsletter.</p>
+              </div>
+            ) : (
+              <form className="flex flex-col gap-3" onSubmit={handleSubscribe}>
+                <input 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email Address" 
+                  required
+                  className="px-3 py-2 rounded-md bg-blue-900/50 border border-blue-800 text-white placeholder-blue-300 focus:outline-none focus:border-secondary font-body text-xs"
+                />
+                <Button type="submit" variant="accent" size="sm" className="w-full text-xs py-2 bg-secondary hover:bg-amber-500">
+                  Subscribe
+                </Button>
+              </form>
+            )}
           </div>
 
         </div>
