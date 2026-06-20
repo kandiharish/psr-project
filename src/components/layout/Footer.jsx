@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Users, MessageCircle, Camera, Briefcase } from 'lucide-react';
 import Button from '../ui/Button';
+import { handleDonateClick } from '../../utils/payment';
 
 const Footer = () => {
   return (
@@ -52,7 +53,7 @@ const Footer = () => {
               <li><a href="#programs" className="hover:text-secondary transition-colors">Our Programs</a></li>
               <li><a href="#gallery" className="hover:text-secondary transition-colors">Gallery</a></li>
               <li><a href="#contact" className="hover:text-secondary transition-colors">Contact Us</a></li>
-              <li><a href="#donate" className="hover:text-secondary transition-colors">Donate Now</a></li>
+              <li><a href="#donate" onClick={handleDonateClick} className="hover:text-secondary transition-colors">Donate Now</a></li>
             </ul>
           </div>
 

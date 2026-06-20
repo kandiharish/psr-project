@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Heart } from 'lucide-react';
 import Button from '../ui/Button';
+import { handleDonateClick } from '../../utils/payment';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -121,7 +122,7 @@ const Header = () => {
 
         {/* Right CTA */}
         <div className="hidden md:flex items-center justify-end z-10">
-          <a href="#donate" onClick={(e) => handleNavClick(e, 'donate')}>
+          <a href="#donate" onClick={handleDonateClick}>
             <Button variant="accent" size="sm" className="bg-secondary hover:bg-amber-500 border-none text-primary font-bold shadow-md shadow-secondary/20">
               Donate Now
             </Button>
@@ -177,7 +178,7 @@ const Header = () => {
                   </a>
                 );
               })}
-              <a href="#donate" onClick={(e) => handleNavClick(e, 'donate')} className="mt-4">
+              <a href="#donate" onClick={(e) => { setIsMobileMenuOpen(false); handleDonateClick(e); }} className="mt-4">
                 <Button variant="accent" className="w-full bg-secondary hover:bg-amber-500 border-none text-primary font-bold shadow-md">
                   Donate Now
                 </Button>

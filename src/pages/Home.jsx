@@ -6,6 +6,7 @@ import Card from '../components/ui/Card';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import Gallery from '../components/ui/Gallery';
 import MomentsOfImpact from '../components/layout/MomentsOfImpact';
+import { handleDonateClick } from '../utils/payment';
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -122,7 +123,7 @@ const Home = () => {
             className="flex flex-col items-center gap-4 relative z-30"
           >
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#donate" className="group px-8 py-3 bg-secondary text-primary rounded-full font-bold text-base hover:bg-yellow-400 hover:scale-105 transition-all duration-300 text-center flex items-center justify-center gap-2 shadow-lg">
+              <a href="#donate" onClick={handleDonateClick} className="group px-8 py-3 bg-secondary text-primary rounded-full font-bold text-base hover:bg-yellow-400 hover:scale-105 transition-all duration-300 text-center flex items-center justify-center gap-2 shadow-lg">
                 <span>Donate Now</span>
                 <Heart size={16} className="fill-primary" />
               </a>
@@ -270,7 +271,7 @@ const Home = () => {
                     <Heart size={20} className="text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-signature font-bold text-primary text-3xl md:text-4xl mt-1">Selsiya Princy</h4>
+                    <h4 className="font-signature font-bold text-primary text-3xl md:text-4xl mt-1">Princy Selsiya</h4>
                     <p className="text-xs text-gray-500 font-body uppercase tracking-wider">Founder & Chairperson</p>
                   </div>
                 </div>
@@ -333,63 +334,91 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Founder Story Section */}
-      <section id="about" className="py-24 bg-white relative z-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Featured Media Highlight Section */}
+      <section id="about" className="py-24 bg-gradient-to-b from-white to-[#F8F6F0] relative z-20">
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side: Modern Glassmorphism Card */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              className="relative group order-2 lg:order-1"
             >
-              <div className="relative aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden shadow-2xl bg-cream border-8 border-white group">
-                <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                <motion.img 
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.7 }}
-                  src="/psr nanaku image.jpeg" 
-                  alt="Founder Story" 
-                  className="w-full h-full object-contain p-4 z-0 drop-shadow-lg"
-                />
+              {/* Glassmorphism Container */}
+              <div className="relative aspect-square md:aspect-auto md:h-[550px] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] bg-white/40 backdrop-blur-2xl border border-white/60 p-3 lg:p-4 hover:shadow-[0_30px_60px_rgba(0,0,0,0.15)] transition-shadow duration-500">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gray-100">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+                  
+                  <motion.img 
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.7 }}
+                    src="/psr nanaku image.jpeg" 
+                    alt="Podcast Feature - Nannaku Prematho" 
+                    className="w-full h-full object-cover object-top z-0"
+                  />
+                  
+
+                </div>
               </div>
+              
+              {/* Decorative Blur Elements */}
+              <div className="absolute -top-10 -left-10 w-32 h-32 bg-secondary/30 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl -z-10"></div>
             </motion.div>
 
+            {/* Right Side: Content */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="flex flex-col justify-center order-1 lg:order-2"
             >
-              <h4 className="text-secondary font-heading text-xs font-bold uppercase tracking-widest mb-2">Our Foundation Story</h4>
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-8">A Promise Honored. A Legacy Continued.</h2>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="px-4 py-1.5 bg-red-500/10 text-red-600 border border-red-500/20 rounded-full text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2 shadow-sm">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                  </span>
+                  Featured Media Highlight
+                </span>
+                <span className="text-sm font-bold text-gray-500 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">19-06-2026</span>
+              </div>
               
-              <div className="space-y-6 relative before:absolute before:inset-0 before:ml-2 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-200 before:to-transparent">
-                {[
-                  "A lifelong commitment to compassion and community service",
-                  "Encouragement and unwavering support toward education",
-                  "Dedicated support for girls and differently-abled individuals",
-                  "The spiritual journey and pilgrimage dream",
-                  "An unexpected and profound loss",
-                  "The birth of PSR Memorial Foundation to continue his work"
-                ].map((item, i) => (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 + (i * 0.1) }}
-                    key={i} 
-                    className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
-                  >
-                    <div className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-white bg-secondary/20 group-hover:bg-secondary text-secondary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 transition-colors duration-300">
-                      <div className="w-1.5 h-1.5 bg-secondary rounded-full group-hover:bg-white transition-colors duration-300"></div>
-                    </div>
-                    <div className="w-[calc(100%-2.5rem)] md:w-[calc(50%-1.5rem)] px-4 py-3 rounded-xl border border-gray-100 bg-white shadow-sm font-body text-xs md:text-sm text-text/80 group-hover:border-secondary/30 group-hover:shadow-md transition-all duration-300">
-                      {item}
-                    </div>
-                  </motion.div>
-                ))}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-primary mb-6 leading-[1.2] tracking-tight">
+                నాన్నకు ప్రేమతో... <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-secondary pb-2 inline-block text-2xl md:text-3xl mt-2 font-bold tracking-normal">
+                  CHARCHA With Real Leaders - 4 | Fathers Day Special
+                </span>
+              </h2>
+              
+              <div className="space-y-5 font-serif text-text/80 text-base md:text-lg leading-relaxed mb-10">
+                <p>
+                  In a heartfelt <span className="font-semibold text-primary">Father's Day Special</span> on <span className="font-semibold italic text-primary">Charcha with Real Leader</span> (Episode 04), our Founder, <span className="font-semibold text-primary">Princy Selsiya</span>, sits down with host Vinil Reddy to share the emotional and inspiring origin of the PSR Memorial Foundation.
+                </p>
+                <p>
+                  Discover the profound story of a lifelong commitment to compassion, an unexpected loss, and how one father's dream for his daughter transformed into a powerful legacy of empowerment, education, and community service.
+                </p>
+              </div>
+
+              {/* Platform Buttons */}
+              <div className="flex flex-row flex-wrap items-center gap-3 pt-4 border-t border-gray-200/60 mt-4">
+                <a href="https://www.talradio.org/podcasts/6a34d2f24f72892852c5242f" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-5 py-2.5 bg-[#E50914] text-white rounded-xl font-bold hover:bg-[#b80710] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                  <svg className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><circle cx="12" cy="12" r="3"/><path d="M12 6a6.007 6.007 0 0 0-6 6h2a4.005 4.005 0 0 1 4-4v-2zm4.243 1.757l1.414-1.414A7.962 7.962 0 0 0 12 4v2a5.97 5.97 0 0 1 4.243 1.757z"/></svg>
+                  TAL Radio
+                </a>
+                <a href="https://open.spotify.com/episode/5nID0fV3QroFIJLl9QQSPe?si=jzHrE_TCTqqESy-MwRrmvA" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-5 py-2.5 bg-[#1DB954] text-white rounded-xl font-bold hover:bg-[#189945] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                  <svg className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.836 17.347c-.244.397-.751.528-1.144.283-3.136-1.916-7.078-2.348-11.716-1.285-.452.103-.9-.176-1.003-.628-.103-.452.176-.9.628-1.003 5.068-1.159 9.426-.677 12.951 1.48.396.242.527.75.284 1.153zm1.428-3.189c-.305.495-.945.659-1.439.354-3.593-2.206-9.088-2.825-13.065-1.547-.561.181-1.15-.126-1.332-.687-.181-.561.126-1.15.687-1.332 4.549-1.461 10.603-.764 14.793 1.808.495.305.659.944.356 1.404zm.147-3.344c-4.29-2.548-11.365-2.782-15.485-1.543-.68.204-1.4-.183-1.604-.863-.204-.68.183-1.4.863-1.604 4.75-1.428 12.564-1.161 17.514 1.782.617.367.821 1.166.453 1.783-.367.617-1.165.822-1.741.445z"/></svg>
+                  Spotify
+                </a>
+                <a href="https://podcasts.apple.com/in/podcast/id1607828622?i=1000773369769" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-5 py-2.5 bg-[#B150E2] text-white rounded-xl font-bold hover:bg-[#9643bf] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                  <svg className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.56-1.702z"/></svg>
+                  Apple Podcasts
+                </a>
               </div>
             </motion.div>
           </div>

@@ -1,20 +1,27 @@
-Stories of Change
-"Before the foundation, my daughter had to walk three miles just to get clean water. Now, she spends that time in school, dreaming of becoming a doctor. You didn't just give us water; you gave her a future."
 
-Meera
+Configure the **Donate Now** button to directly initiate a UPI payment using the following UPI ID:
 
-Mother of two, Supported Village 
-instead of above message add below content brief and more emotional way :
-### Stories of Change
+**psrmemorial@ptyes**
 
-#### From Determination to Dreams
+When a user clicks the Donate Now button:
 
-Financial hardships once threatened to interrupt a young girl's education. Her family faced significant challenges, and continuing her studies seemed uncertain.
+* On mobile devices, automatically open the installed UPI application (Google Pay, PhonePe, Paytm, BHIM, etc.).
+* Pre-fill the payment details using the UPI ID.
+* Display the payee name as **PSR Memorial Foundation**.
+* Use a standard UPI payment intent link.
+* If no UPI application is available, show a fallback popup containing:
 
-Despite these obstacles, her brother worked tirelessly in a photography studio to support the family and ensure that her education would not come to a halt. With dedication, sacrifice, and the support of those who believed in the power of education, she continued pursuing her dreams.
+  * UPI ID: psrmemorial@ptyes
+  * Copy UPI ID button
+  * QR Code for payment
+  * Simple payment instructions
 
-Today, she is pursuing her Master's degree in the United States, proving that when determination meets opportunity, lives can be transformed.
+Generate the UPI payment link using:
 
-Her journey is a reminder that investing in education does more than support a student—it creates opportunities, empowers families, and inspires future generations.
+upi://pay?pa=psrmemorial@ptyes&pn=PSR%20Memorial%20Foundation
 
-**Every dream deserves a chance. Every opportunity creates a future.**
+Add a subtle donation confirmation message after redirection:
+
+"Thank you for supporting PSR Memorial Foundation. Your contribution helps create opportunities, inspire hope, and transform lives."
+
+Ensure the implementation is mobile-friendly, secure, responsive, and provides a smooth donation experience.
