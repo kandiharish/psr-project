@@ -4,32 +4,32 @@ import { motion } from 'framer-motion';
 const impactStories = [
   {
     id: 1,
-    image: '/WhatsApp Image 2026-06-17 at 11.57.31 PM.jpeg',
+    image: '/WhatsApp Image 2026-06-17 at 11.57.31 PM.webp',
     category: 'Student Support',
   },
   {
     id: 2,
-    image: '/WhatsApp Image 2026-06-17 at 11.57.31 PM (1).jpeg',
+    image: '/WhatsApp Image 2026-06-17 at 11.57.31 PM (1).webp',
     category: 'Donor Recognition',
   },
   {
     id: 3,
-    image: '/WhatsApp Image 2026-06-17 at 11.57.31 PM (2).jpeg',
+    image: '/WhatsApp Image 2026-06-17 at 11.57.31 PM (2).webp',
     category: 'Student Support',
   },
   {
     id: 4,
-    image: '/WhatsApp Image 2026-06-17 at 11.57.32 PM.jpeg',
+    image: '/WhatsApp Image 2026-06-17 at 11.57.32 PM.webp',
     category: 'Donor Recognition',
   },
   {
     id: 5,
-    image: '/WhatsApp Image 2026-06-17 at 11.57.32 PM (1).jpeg',
+    image: '/WhatsApp Image 2026-06-17 at 11.57.32 PM (1).webp',
     category: 'Student Support',
   },
   {
     id: 6,
-    image: '/WhatsApp Image 2026-06-17 at 11.57.32 PM (2).jpeg',
+    image: '/WhatsApp Image 2026-06-17 at 11.57.32 PM (2).webp',
     category: 'Donor Recognition',
   }
 ];

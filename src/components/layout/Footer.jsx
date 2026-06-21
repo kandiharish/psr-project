@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/20 bg-white shadow-lg p-1">
                 <img loading="lazy" 
-                  src="/psr logo.jpeg" 
+                  src="/psr logo.webp" 
                   alt="PSR Memorial Foundation" 
                   className="w-full h-full object-cover rounded-full"
                 />

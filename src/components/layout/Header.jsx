@@ -90,7 +90,7 @@ const Header = () => {
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 group relative z-10" onClick={(e) => handleNavClick(e, 'home')}>
           <motion.img 
-            src="/psr_logo.png" 
+            src="/psr_logo.webp" 
             alt="PSR Memorial Foundation" 
             className={`object-contain transition-all duration-300 drop-shadow-sm ${
               isScrolled ? 'h-16 md:h-20 w-auto' : 'h-24 md:h-28 w-auto -mt-2 md:-mt-4'

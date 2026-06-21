@@ -63,7 +63,7 @@ const DonateModal = () => {
                 <X size={20} className="text-white group-hover:scale-110 transition-transform" />
               </button>
               <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center p-2 shadow-lg">
-                <img src="/psr_logo.png" alt="PSR Logo" className="w-full h-full object-contain" />
+                <img src="/psr_logo.webp" alt="PSR Logo" className="w-full h-full object-contain" />
               </div>
               <h3 className="text-2xl font-heading font-bold text-secondary mb-1">Support Our Mission</h3>
               <p className="text-sm font-body text-blue-100 opacity-90">Your generosity creates lasting change.</p>

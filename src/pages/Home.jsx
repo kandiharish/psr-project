@@ -165,7 +165,7 @@ const Home = () => {
                     {/* Item 1 */}
                     <div className="flex-shrink-0 w-[18rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
                       <div className="h-[16rem] overflow-hidden relative">
-                        <img src="/Speaker.jpeg" alt="Shri Gaddam Prasad Garu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                        <img src="/Speaker.webp" alt="Shri Gaddam Prasad Garu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-3 left-4 right-4 text-left">
                           <p className="text-white text-xs font-semibold drop-shadow-md">On June 20, 2026</p>
@@ -183,7 +183,7 @@ const Home = () => {
                     {/* Item 2 */}
                     <div className="flex-shrink-0 w-[18rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
                       <div className="h-[16rem] overflow-hidden relative">
-                        <img src="/speaker2.jpeg" alt="Shri Gaddam Prasad Garu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                        <img src="/speaker2.webp" alt="Shri Gaddam Prasad Garu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-3 left-4 right-4 text-left">
                           <p className="text-white text-xs font-semibold drop-shadow-md">On June 20, 2026</p>
@@ -201,7 +201,7 @@ const Home = () => {
                     {/* Item 3 */}
                     <div className="flex-shrink-0 w-[18rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
                       <div className="h-[16rem] overflow-hidden relative">
-                        <img src="/MV Gona Reddy .jpeg" alt="MV Gona Reddy" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" />
+                        <img src="/MV Gona Reddy .webp" alt="MV Gona Reddy" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-3 left-4 right-4 text-left">
                           <p className="text-white text-xs font-semibold drop-shadow-md">On June 20, 2026</p>
@@ -301,7 +301,7 @@ const Home = () => {
           >
             <div className="grid grid-cols-1 md:grid-cols-5 items-stretch">
               <div className="md:col-span-2 relative h-[400px] md:h-auto overflow-hidden group">
-                <img loading="lazy" src="/founder pic.jpeg" alt="Founder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img loading="lazy" src="/founder pic.webp" alt="Founder" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8 text-white z-10 w-full">
                   <h3 className="text-2xl font-heading font-bold mb-1">Message from the Founder</h3>
@@ -356,12 +356,12 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Education Support', desc: 'Providing scholarships, learning materials, and infrastructure for underprivileged children.', icon: GraduationCap, image: '/3 education.png' },
-              { title: 'Healthcare Assistance', desc: 'Organizing medical camps and providing essential healthcare access to remote communities.', icon: Activity, image: '/3 health camp.png' },
-              { title: 'Women Empowerment', desc: 'Skill development and advocacy programs to ensure equal opportunities for women.', icon: Users, image: '/girl child empowerment 3.png' },
-              { title: 'Food & Nutrition', desc: 'Ensuring zero hunger by distributing nutritious meals to marginalized communities.', icon: Droplet, image: '/food erving nutrition 3.png' },
-              { title: 'Volunteer Engagement', desc: 'Mobilizing passionate individuals to create grassroots impact and community support.', icon: Heart, image: '/3 volunterr experience.png' },
-              { title: 'Girl Child Education', desc: 'Dedicated programs focusing on removing barriers to education for young girls.', icon: BookOpen, image: '/educating girl child.png' }
+              { title: 'Education Support', desc: 'Providing scholarships, learning materials, and infrastructure for underprivileged children.', icon: GraduationCap, image: '/3 education.webp' },
+              { title: 'Healthcare Assistance', desc: 'Organizing medical camps and providing essential healthcare access to remote communities.', icon: Activity, image: '/3 health camp.webp' },
+              { title: 'Women Empowerment', desc: 'Skill development and advocacy programs to ensure equal opportunities for women.', icon: Users, image: '/girl child empowerment 3.webp' },
+              { title: 'Food & Nutrition', desc: 'Ensuring zero hunger by distributing nutritious meals to marginalized communities.', icon: Droplet, image: '/food erving nutrition 3.webp' },
+              { title: 'Volunteer Engagement', desc: 'Mobilizing passionate individuals to create grassroots impact and community support.', icon: Heart, image: '/3 volunterr experience.webp' },
+              { title: 'Girl Child Education', desc: 'Dedicated programs focusing on removing barriers to education for young girls.', icon: BookOpen, image: '/educating girl child.webp' }
             ].map((area, index) => (
               <motion.div
                 key={index}
@@ -411,7 +411,7 @@ const Home = () => {
                   <motion.img 
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.7 }}
-                    src="/psr nanaku image.jpeg" 
+                    src="/psr nanaku image.webp" 
                     alt="Podcast Feature - Nannaku Prematho" 
                     className="w-full h-full object-cover object-top z-0"
                   />
@@ -538,7 +538,7 @@ const Home = () => {
             className="mt-16 max-w-2xl mx-auto"
           >
             <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-white flex items-center justify-center p-3 mb-10 shadow-2xl">
-               <img loading="lazy" src="/psr_logo.png" alt="PSR Logo" className="w-full h-full object-contain" />
+               <img loading="lazy" src="/psr_logo.webp" alt="PSR Logo" className="w-full h-full object-contain" />
             </div>
             <h3 className="text-xl md:text-2xl font-heading italic font-light text-white leading-relaxed">
               "One act of kindness can transform generations."
@@ -564,9 +564,9 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              { title: 'Illuminating Minds', desc: 'Bringing the light of education to children who dare to dream beyond their circumstances.', image: '/education.png' },
-              { title: 'Uplifting Women', desc: 'Fostering independence, dignity, and unstoppable confidence in young girls.', image: '/girls education.png' },
-              { title: 'Healing Communities', desc: 'Delivering vital care, nourishment, and hope to families in their most vulnerable hours.', image: '/healthcare camp.png' }
+              { title: 'Illuminating Minds', desc: 'Bringing the light of education to children who dare to dream beyond their circumstances.', image: '/education.webp' },
+              { title: 'Uplifting Women', desc: 'Fostering independence, dignity, and unstoppable confidence in young girls.', image: '/girls education.webp' },
+              { title: 'Healing Communities', desc: 'Delivering vital care, nourishment, and hope to families in their most vulnerable hours.', image: '/healthcare camp.webp' }
             ].map((pillar, index) => (
               <motion.div
                 key={index}
@@ -605,7 +605,7 @@ const Home = () => {
             <div className="w-full lg:w-1/3 relative flex items-center justify-center">
               <div className="w-full max-w-[320px] lg:max-w-full rounded-2xl overflow-hidden shadow-xl relative bg-white p-2 border border-gray-100 group">
                 <div className="overflow-hidden rounded-xl relative">
-                  <img loading="lazy" src="/stories%20of%20change.jpeg" alt="Determination to Dreams" className="w-full h-[300px] md:h-[350px] lg:h-[420px] object-cover object-center scale-110 transition-transform duration-700 group-hover:scale-125" />
+                  <img loading="lazy" src="/stories%20of%20change.webp" alt="Determination to Dreams" className="w-full h-[300px] md:h-[350px] lg:h-[420px] object-cover object-center scale-110 transition-transform duration-700 group-hover:scale-125" />
                   <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
                 </div>
               </div>
@@ -719,7 +719,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full border border-gray-100 shadow-md bg-white p-3 mb-8"
           >
-            <img loading="lazy" src="/psr_logo.png" alt="PSR Logo" className="w-full h-full object-contain" />
+            <img loading="lazy" src="/psr_logo.webp" alt="PSR Logo" className="w-full h-full object-contain" />
           </motion.div>
 
           <motion.h2 
