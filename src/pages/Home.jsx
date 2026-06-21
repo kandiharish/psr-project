@@ -158,61 +158,61 @@ const Home = () => {
           >
             <div className="w-full relative py-6 overflow-hidden">
               <div
-                className="flex w-max gap-8 animate-marquee hover:[animation-play-state:paused] py-4"
+                className="flex w-max gap-8 animate-marquee py-4"
               >
                 {[...Array(2)].map((_, i) => (
                   <div key={i} className="flex gap-8 flex-shrink-0">
                     {/* Item 1 */}
-                    <div className="flex-shrink-0 w-[28rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
-                      <div className="h-[26rem] overflow-hidden relative">
+                    <div className="flex-shrink-0 w-[18rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
+                      <div className="h-[16rem] overflow-hidden relative">
                         <img src="/Speaker.jpeg" alt="Shri Gaddam Prasad Garu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-3 left-4 right-4 text-left">
-                          <p className="text-white text-sm font-semibold drop-shadow-md">On June 20, 2026</p>
-                          <p className="text-gray-200 text-xs italic drop-shadow-md">Birthday of Pandu Sheshagiri Rao</p>
+                          <p className="text-white text-xs font-semibold drop-shadow-md">On June 20, 2026</p>
+                          <p className="text-gray-200 text-[10px] italic drop-shadow-md">Birthday of Pandu Sheshagiri Rao</p>
                         </div>
                       </div>
-                      <div className="p-5 text-center bg-white flex-1 flex flex-col justify-center">
-                        <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Logo Launch By</p>
-                        <h4 className="text-xl font-heading font-bold text-primary mb-1 leading-tight group-hover:text-secondary transition-colors duration-300">Shri Gaddam Prasad Garu</h4>
-                        <p className="text-sm font-body text-secondary font-bold">Speaker</p>
-                        <p className="text-xs font-body text-gray-600 mt-1">Telangana State Legislative Assembly</p>
+                      <div className="p-4 text-center bg-white flex-1 flex flex-col justify-center">
+                        <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Logo Launch By</p>
+                        <h4 className="text-base font-heading font-bold text-primary mb-0.5 leading-tight group-hover:text-secondary transition-colors duration-300">Shri Gaddam Prasad Garu</h4>
+                        <p className="text-xs font-body text-secondary font-bold">Speaker</p>
+                        <p className="text-[10px] font-body text-gray-600 mt-0.5">Telangana State Legislative Assembly</p>
                       </div>
                     </div>
                     
                     {/* Item 2 */}
-                    <div className="flex-shrink-0 w-[28rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
-                      <div className="h-[26rem] overflow-hidden relative">
+                    <div className="flex-shrink-0 w-[18rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
+                      <div className="h-[16rem] overflow-hidden relative">
                         <img src="/speaker2.jpeg" alt="Shri Gaddam Prasad Garu" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-3 left-4 right-4 text-left">
-                          <p className="text-white text-sm font-semibold drop-shadow-md">On June 20, 2026</p>
-                          <p className="text-gray-200 text-xs italic drop-shadow-md">Birthday of Pandu Sheshagiri Rao</p>
+                          <p className="text-white text-xs font-semibold drop-shadow-md">On June 20, 2026</p>
+                          <p className="text-gray-200 text-[10px] italic drop-shadow-md">Birthday of Pandu Sheshagiri Rao</p>
                         </div>
                       </div>
-                      <div className="p-5 text-center bg-white flex-1 flex flex-col justify-center">
-                        <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Logo Launch By</p>
-                        <h4 className="text-xl font-heading font-bold text-primary mb-1 leading-tight group-hover:text-secondary transition-colors duration-300">Shri Gaddam Prasad Garu</h4>
+                      <div className="p-4 text-center bg-white flex-1 flex flex-col justify-center">
+                        <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Logo Launch By</p>
+                        <h4 className="text-base font-heading font-bold text-primary mb-0.5 leading-tight group-hover:text-secondary transition-colors duration-300">Shri Gaddam Prasad Garu</h4>
                         <p className="text-sm font-body text-secondary font-bold">Speaker</p>
-                        <p className="text-xs font-body text-gray-600 mt-1">Telangana State Legislative Assembly</p>
+                        <p className="text-[10px] font-body text-gray-600 mt-0.5">Telangana State Legislative Assembly</p>
                       </div>
                     </div>
-
+ 
                     {/* Item 3 */}
-                    <div className="flex-shrink-0 w-[28rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
-                      <div className="h-[26rem] overflow-hidden relative">
-                        <img src="/MV Gona Reddy .jpeg" alt="MV Gona Reddy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    <div className="flex-shrink-0 w-[18rem] bg-white rounded-2xl shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100/80 flex flex-col overflow-hidden group transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.06)] hover:border-secondary/30">
+                      <div className="h-[16rem] overflow-hidden relative">
+                        <img src="/MV Gona Reddy .jpeg" alt="MV Gona Reddy" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                         <div className="absolute bottom-3 left-4 right-4 text-left">
-                          <p className="text-white text-sm font-semibold drop-shadow-md">On June 20, 2026</p>
-                          <p className="text-gray-200 text-xs italic drop-shadow-md">Birthday of Pandu Sheshagiri Rao</p>
+                          <p className="text-white text-xs font-semibold drop-shadow-md">On June 20, 2026</p>
+                          <p className="text-gray-200 text-[10px] italic drop-shadow-md">Birthday of Pandu Sheshagiri Rao</p>
                         </div>
                       </div>
-                      <div className="p-5 text-center bg-white flex-1 flex flex-col justify-center">
-                        <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Logo Launch By</p>
-                        <h4 className="text-xl font-heading font-bold text-primary mb-1 leading-tight group-hover:text-secondary transition-colors duration-300">MV Gona Reddy</h4>
+                      <div className="p-4 text-center bg-white flex-1 flex flex-col justify-center">
+                        <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Logo Launch By</p>
+                        <h4 className="text-base font-heading font-bold text-primary mb-0.5 leading-tight group-hover:text-secondary transition-colors duration-300">MV Gona Reddy</h4>
                         <p className="text-sm font-body text-secondary font-bold">CEO</p>
-                        <p className="text-xs font-body text-gray-600 mt-1">Prateek Foundation</p>
+                        <p className="text-[10px] font-body text-gray-600 mt-0.5">Prateek Foundation</p>
                       </div>
                     </div>
                   </div>
